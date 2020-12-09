@@ -1,6 +1,6 @@
 $Host.UI.RawUI.WindowTitle = "Filemaker Pro Install Script"
 <# 	
-	Install Filemaker Pro 15 x64 for Westlake Boys' High School
+	Install Filemaker Pro 15 x64
 	
 	To change in next version:
 	-Change DisplayVersion query to Version Number query (better integer for math-ing)
@@ -23,7 +23,8 @@ $FMInstallerProductID15 = "{C221AAF3-7C43-40CC-BDB7-82647C79B9FA}"														
 	These should never really need to change
 #>
 $CUR_DATE=get-date -f "dd-MM-yyyy"																							#current date in a nice format for logging
-$FMInstaller = "\\westlake.local\shared\admininstall\Filemaker15\CurrentVersion\Files\FileMaker Pro 15 Advanced.msi"		#location of new version's .msi (the files here will be updated by Ronald)
+$InstallPath = ""
+$FMInstaller = $InstallPath + "\CurrentVersion\Files\FileMaker Pro 15 Advanced.msi"		
 $FMInstallerArguments = "/qn"																								#.msi install arguments (Should not ever need to change)
 $FMInstallerDisplayName = "FileMaker Pro"																					#Filemaker display name
 $FMInstallerVersion = "v15.3"																								#Full version of Filemaker
